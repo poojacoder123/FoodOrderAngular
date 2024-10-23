@@ -1,0 +1,48 @@
+header {
+  background-color: white;
+  border-bottom: 2px solid red;
+  position: relative;
+  .header-container {
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    a {
+      text-decoration: none;
+      color: red;
+    }
+
+    .logo {
+      font-weight: bold;
+      padding: 0.8rem;
+      font-size:2rem ;
+    }
+    a:hover {
+      color: white;
+      background: red;
+      cursor: pointer;
+    }
+
+    ul {
+      list-style-type: none;
+      display: flex;
+
+      a {
+        padding: 0.5rem;
+        margin:0.5rem;
+        // display: inline-block;
+
+        span {
+          background: red;
+          color: white;
+          font-size: 14px;
+          font-weight: bold;
+          padding: 6px 6px;
+          border-radius: 12px;
+          padding-right: 10px;
+          margin-bottom: 16px;
+        }
+      }
+    }
+
+  }
+}
