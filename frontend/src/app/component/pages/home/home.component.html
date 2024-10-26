@@ -1,0 +1,24 @@
+
+<ul>
+  @for( food of foods ; track food){
+ <a routerLink="/food/{{food.id}}">
+  <img class="food-img" [src]="food.imageUrl" [alt]="food.name">
+<div class="content">
+  <div class="name">
+    {{food.name}}
+  </div>
+  <span class="favourite  {{food.favorite? '' : 'not'}}">
+
+
+  </span>
+  <div class="stars">
+    <star-rating-comp [starType]="'svg'" [rating]="currentRating" (ratingChanged)="onRatingChange($event)"></star-rating-comp>
+<p>Current Rating: {{ currentRating }}</p>
+   
+  </div>
+</div>
+
+ </a>
+ 
+  }
+</ul>

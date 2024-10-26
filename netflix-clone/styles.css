@@ -1,0 +1,44 @@
+.main{
+
+    background-image: url("assets/images/bg.png");
+    background-repeat: no-repeat;
+    background-size: max(1200px, 100vw);
+    height: 80vh;
+    position: relative;
+    
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.main .box {
+    height: 80vh;
+    width: 100%;
+    opacity: 0.8;
+    background-color: black;
+    position: absolute;
+}
+
+.logo-img{
+    width: 150px;
+    position: relative;
+    z-index: 10;
+}
+
+nav{
+    background-color: #0000009c; 
+    display: flex; 
+    justify-content: space-between;
+     max-width: 70vw;
+     margin: 0 auto;
+     height: 100px;
+     padding-top: 1rem;
+}
+
+nav button {
+    position: relative;
+    z-index: 10;  
+}
