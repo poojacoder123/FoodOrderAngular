@@ -23,7 +23,7 @@ select{
 .main .box {
   height: 100vh;
   width: 100%;
-  opacity: 0.8;
+  opacity: 0.7;
   background-color: black;
   position: absolute;
 }
@@ -39,7 +39,7 @@ nav {
   justify-content: space-between;
   max-width: 70vw;
   margin: 0 auto;
-  padding-top: 1rem;
+  padding-top: 1.8rem;
 }
 
 nav button {
@@ -51,6 +51,11 @@ nav button {
   background-color: red;
   color: #ffffff;
   border-radius: 8px;
+  cursor: pointer;
+}
+.sign-in-button:hover{
+
+  background-color: brown;
 }
 
 .translate-button{
@@ -97,7 +102,7 @@ nav button {
   color: #ffffff;
   font-size: 1rem;
   font-weight: 800;
-  margin-top: 1rem;
+  margin-top: 3.5rem;
   text-align: center;
 }
 
@@ -123,7 +128,12 @@ nav button {
   color: #ffffff;
   position: relatve;
   border-radius: 4px;
+  cursor: pointer;
 }
+.hero-button:hover{
+background-color: brown;
+}
+
 input::placeholder {
   color: #ffffff;
   opacity: 1;
@@ -132,13 +142,95 @@ input{
   border : 1px solid white;
 }
 
+/* second section */
+
+.second-section{
+  display: flex;
+  /* width: 70vw; */
+  /* margin:0 auto; */
+  background-color: black !important;
+  color: white;
+
+
+}
+.select-input{
+  display: flex;
+  flex-direction: column;
+  
+}
+
+.custom-select{
+  min-width: auto;
+    width: auto;
+    line-height: 1.5;
+    padding-top: 0.5rem;
+    padding-right: calc(2.25rem + 0rem);
+    padding-bottom: 0.5rem;
+    padding-left: 0.75rem;
+}
+
+
+.trending-box {
+  width: 100%;
+
+  padding: 20px;
+  background: linear-gradient(180deg, #000 0%, #1a1a1a 100%);
+
+  color: #fff;
+  text-align: left;
+  /* font-family: Arial, sans-serif; */
+}
+.trending-box h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+.dropdown-container{
+  display: flex;
+  flex-direction: row;
+  gap: 10px
+  /* justify-content: space-between; */
+  /* align-items: center; */
+}
+.dropdown {
+  /* width: 100%; */
+  margin-bottom: 1rem;
+  padding-right: 10px;
+}
+.dropdown select {
+  width: 100%;
+  padding: 10px;
+  background-color: #333;
+  color: #fff;
+  border: 1px solid white;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+@media (min-width: 992px) {
+ 
+}
+
+
+
+
+
+
+
+
+
+
+
+
 @media (min-width: 320px) and (max-width: 616px) {
   nav {
     max-width: 90vw;
   }
+  logo-img {
+    width: 100px;
+  }
 
   .header-text-one {
-    font-size: 36px;
+    font-size: 30px;
+    line-height: 36px;
   }
   .header-text-two {
     font-size: 1.3rem;
@@ -159,4 +251,23 @@ input{
   .button {
     margin-top: 1rem;
   }
+  .button:hover{
+    background-color: brown;
+  }
+
+  .translate-button select 
+  { 
+    display: none; 
+   }
+
+   .trending-box {
+    width: 100%;
 }
+.dropdown-container{
+  display: block;
+}
+.dropdown {
+ width: 100%;
+}
+}
+
