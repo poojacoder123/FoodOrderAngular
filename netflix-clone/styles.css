@@ -142,43 +142,18 @@ input{
   border : 1px solid white;
 }
 
-/* second section */
 
-.second-section{
-  display: flex;
-  /* width: 70vw; */
-  /* margin:0 auto; */
-  background-color: black !important;
-  color: white;
-
-
-}
-.select-input{
-  display: flex;
-  flex-direction: column;
-  
-}
-
-.custom-select{
-  min-width: auto;
-    width: auto;
-    line-height: 1.5;
-    padding-top: 0.5rem;
-    padding-right: calc(2.25rem + 0rem);
-    padding-bottom: 0.5rem;
-    padding-left: 0.75rem;
-}
 
 
 .trending-box {
   width: 100%;
 
-  padding: 20px;
+  padding: 20px 100px;
   background: linear-gradient(180deg, #000 0%, #1a1a1a 100%);
 
   color: #fff;
   text-align: left;
-  /* font-family: Arial, sans-serif; */
+ 
 }
 .trending-box h2 {
   font-size: 1.5rem;
@@ -187,12 +162,11 @@ input{
 .dropdown-container{
   display: flex;
   flex-direction: row;
-  gap: 10px
-  /* justify-content: space-between; */
-  /* align-items: center; */
+  gap: 16px
+ 
 }
 .dropdown {
-  /* width: 100%; */
+
   margin-bottom: 1rem;
   padding-right: 10px;
 }
@@ -205,21 +179,11 @@ input{
   border-radius: 4px;
   font-size: 1rem;
 }
-@media (min-width: 992px) {
- 
+
+.movies-container{
+  display: flex;
+  gap : 1rem
 }
-
-
-
-
-
-
-
-
-
-
-
-
 @media (min-width: 320px) and (max-width: 616px) {
   nav {
     max-width: 90vw;

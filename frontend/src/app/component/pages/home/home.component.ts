@@ -2,7 +2,7 @@ import { Component, OnInit, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { FoodService } from '../../../services/food.service';
 import { Food } from '../../../shared/models/food';
 import { RouterLink } from '@angular/router';
-
+import { CommonModule } from '@angular/common';
 
 
 
@@ -10,7 +10,7 @@ import { RouterLink } from '@angular/router';
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [RouterLink],
+  imports: [RouterLink, CommonModule],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss',
   schemas: [

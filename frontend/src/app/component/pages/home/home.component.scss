@@ -1,0 +1,50 @@
+ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 0;
+  list-style: none;
+  gap: 10px;
+
+  li a {
+    height: 341px;
+    width: 286px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    border-radius: 20px;
+    overflow: hidden;
+    // margin: 4rem;
+
+    img {
+      border-radius: 16px;
+      object-fit: cover;
+    }
+  }
+
+  li a:hover {
+    cursor: pointer;
+    opacity: 0.8;
+  }
+
+  .food-name-container {
+    display: flex;
+    justify-content: space-between;
+
+    .favorite {
+      color: red;
+    }
+    .not-favorite {
+      color: grey;
+    }
+  }
+
+  .origin-name{
+    display: inline;
+    
+  }
+  .clock{
+    color: grey
+  }
+}
