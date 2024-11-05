@@ -9,6 +9,7 @@
           <div class="name">
             {{food.name}} 
           </div>
+          <app-star-rating></app-star-rating>
           <div>
             <i class="fas fa-heart"
              [ngClass]="{'favorite': food.favorite, 'not-favorite': !food.favorite}" ></i>
@@ -26,15 +27,7 @@
         <div class="name">
           ${{food.price}}  
         </div>
-        <div class="star-rating"> 
-          @for(let star of food.stars; let i="index"; track star){
-            <i  class="fa-star" 
-            [ngClass]="{'fas': (i < rating) || (i < hoverRating), 'far': i >= rating && i >= hoverRating}" 
-            (click)="rate(i + 1)" 
-            (mouseover)="hoverRating(i + 1)" 
-            (mouseleave)="resetHover()"> </i>
-          }
-           </div>
+       
       </div>
       
        </a>

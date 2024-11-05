@@ -1,0 +1,58 @@
+.container{
+margin: 100px auto;
+width: 500px;
+height: 600px;
+border: 1px solid grey;
+border-radius: 16px;
+}
+
+.outer-div{
+ padding: 1rem;
+ display: flex;
+ flex-direction: column;
+ justify-content: space-between;
+
+}
+
+.first-div{
+
+}
+img{
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.subscribe{
+    text-transform: uppercase;
+    color: #666a6eeb;
+    font-weight: 500;
+    font-family: system-ui;
+}
+
+.second-div h1{
+    font-weight: 400;
+    font-size: 30px;
+    font-family: system-ui;
+    line-height: 34px;
+}
+
+.second-div .card-para{
+    color: #666a6eeb; 
+    font-weight: 400;
+    font-family: system-ui; 
+    font-size: 18px;
+}
+
+button{
+    border: 1px solid grey;
+    padding: 10px 30px;
+    border-radius: 6px;
+    background: white;
+    color: #1C73E8;
+    font-size: 16px;
+    font-weight: 500;
+    margin-top: 2rem;
+}
+
+

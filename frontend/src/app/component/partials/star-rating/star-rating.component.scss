@@ -1,0 +1,8 @@
+.fa-star{
+    color: grey;
+    cursor: pointer;
+
+    &.rated{
+color : red;
+    }
+}
