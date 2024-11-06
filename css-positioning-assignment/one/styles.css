@@ -1,0 +1,88 @@
+* {
+  box-sizing: border-box;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+h1,p{
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+  margin: 50px auto;
+  height: 600px;
+  width: 500px;
+  border: 1px solid black;
+  padding: 1rem;
+  border-radius: 16px;
+  box-shadow: 0 0 10px black;
+}
+
+.inner-container {
+  border-radius: 16px;
+}
+
+.image-div {
+  position: relative;
+}
+
+.img-one {
+  width: 100%;
+  height: 350px;
+  border-radius: 16px;
+}
+
+.promoted {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  background-color: grey;
+  color: white;
+  font-size: 16px;
+  padding: 6px 10px;
+}
+
+.offer {
+  position: absolute;
+  bottom: 16px;
+  left: 0;
+  background-color: #266fef;
+  color: white;
+  font-size: 20px;
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+
+.time {
+  position: absolute;
+  bottom: 20px;
+  right: 16px;
+  background-color: white;
+  color: black;
+  font-weight: 500;
+  font-size: 20px;
+  padding: 2px 4px;
+  border-radius: 4px;
+}
+
+.heading{
+font-weight: 500;
+}
+
+.para{
+color: grey;
+font-size: 20px;
+font-weight: 400;
+margin-top: 12px;
+}
+
+.footer{
+
+}
+
+.footer p{
+    color: grey;
+    font-size: 16px;
+    font-weight: 400;
+    margin-top: 20px;
+}
