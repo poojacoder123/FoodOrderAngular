@@ -1,0 +1,60 @@
+.container{
+    margin :100px auto;
+    height: 400px;
+    width: 400px;
+    border: 1px solid grey;
+    border-radius: 10px;
+}
+
+.image-div{
+position: relative;
+}
+.bg-img{
+    border-radius: 10px;
+}
+
+ .container .image-div img{
+width: 100%;
+height: 150px;
+
+}
+
+.profile{
+    position: absolute;
+    bottom: -47px;
+    right:132px ;
+    left: 132px;
+    height: 131px;
+    width: 136px;
+    border-radius: 68px;
+    border: 4px solid white;
+    background-color: #ffffff;
+}
+
+.profile img{
+    margin-top: 2px;
+width: 100%;
+height: 131px;
+border-radius: 68px;
+object-fit: cover;
+}
+
+.content{
+    margin-top: 106px;
+    text-align: center;
+    font-family: system-ui;
+}
+
+.content h1{
+font-size: 40px;
+font-weight: 600;
+padding: 0;
+margin: 0;
+}
+
+.content p{
+color: grey;
+font-size: 26px;
+padding: 10px;
+margin: 0;
+}
