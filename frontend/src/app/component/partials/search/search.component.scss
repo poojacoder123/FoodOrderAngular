@@ -1,12 +1,12 @@
 .searchBox {
   background: #f1f1f1;
-  margin: 2rem auto;
-  width: 15rem;
+  margin: 1rem auto;
+  width: 20rem;
   height: 2.5rem;
   border: 1px solid grey;
   border-radius: 16px;
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
 }
 
 .button button {
@@ -15,17 +15,27 @@
   cursor: pointer;
   height: 100%;
   border: none;
-  border-radius:0px 16px 16px 0px;
+  border-radius: 0px 16px 16px 0px;
 }
 
 .input input {
-    background: #f1f1f1;
-border: none;
-padding: 10px 0px;
-font-size: 14px;
+  background: #f1f1f1;
+  border: none;
+  padding: 10px 0px;
+  padding-left: 16px;
+  font-size: 14px;
+  border-radius: 16px;
+  box-sizing: border-box;
 }
 
-input:focus{
-    border: none;
-    outline: none;
+input:focus {
+  border: none;
+  outline: none;
+}
+
+.fa-xmark {
+  color: grey;
+  font-size: 1rem;
+  padding: 6px 12px;
+  text-align: end;
 }

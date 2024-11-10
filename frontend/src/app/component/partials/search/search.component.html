@@ -1,12 +1,16 @@
 <div class="searchBox">
-    <div class="input">
-        <input type="text" placeholder="Search..."
-         #s (keyup.enter)="search(s.value)"
-         [value]="searchTerm"
-         >
-         
-    </div>
-  <div class="button">
-    <button (click)="search(s.value)" >Search</button>
+  <div class="input">
+    <input
+      type="text"
+      placeholder="Search..."
+      #s
+      (input)="onInput(s.value)"
+      (keyup.enter)="search(s.value)"
+      [value]="searchTerm"
+    />
+   
   </div>
+  <div class="button">
+    <i *ngIf="searchTerm" class="fa-solid fa-xmark" (click)="clearInput(s)"></i>
+    <button (click)="search(s.value)">Search</button></div>
 </div>

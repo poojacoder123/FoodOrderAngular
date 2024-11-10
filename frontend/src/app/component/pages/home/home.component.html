@@ -1,39 +1,57 @@
 
 <app-search></app-search>
+<app-tags></app-tags>
 <ul>
   @for( food of foods ; track food){
-    <li>
-      <a routerLink="/food/{{food.id}}">
-        <img class="food-img" [src]="food.imageUrl" [alt]="food.name" class="food-image">
+  <li>
+    <a routerLink="/food/{{ food.id }}">
+      <img
+        class="food-img"
+        [src]="food.imageUrl"
+        [alt]="food.name"
+        class="food-image"
+      />
       <div class="content">
-        <div class="food-name-container" >
+        <div class="food-name-container">
           <div class="name">
-            {{food.name}} 
+            {{ food.name }}
           </div>
           <app-star-rating [rating]="food.stars"></app-star-rating>
           <div>
-            <i class="fas fa-heart"
-             [ngClass]="{'favorite': food.favorite, 'not-favorite': !food.favorite}" ></i>
+            <i
+              class="fas fa-heart"
+              [ngClass]="{
+                favorite: food.favorite,
+                'not-favorite': !food.favorite
+              }"
+            ></i>
           </div>
         </div>
-       @for( ori of food.origins; track ori){
-        <span class="origin-name" >
-          {{ori | titlecase}}
+        @for( ori of food.origins; track ori){
+        <span class="origin-name">
+          {{ ori | titlecase }}
         </span>
-       }
-       
+        }
+
         <div class="name">
-          <i class="fas fa-clock clock"  aria-hidden="true"></i> {{food.cookTime}} Minutes
+          <i class="fas fa-clock clock" aria-hidden="true"></i>
+          {{ food.cookTime }} Minutes
         </div>
-        <div class="name">
-          ${{food.price}}  
-        </div>
-       
+        <div class="name">${{ food.price }}</div>
       </div>
-      
-       </a>
-        
-    </li>
- 
+    </a>
+  </li>
+
+  } @empty{
+  <div class="no-food-found">
+    <img
+      src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT0tCk-7vFOUiU9CDfwV9hEQNNqEoQIa1RdmQ&s"
+      alt="No Food Found"
+      class="no-food-image"
+    />
+    <h2>Oops! No Food Found</h2>
+    <p>It looks like we couldn't find any food items that match your search.</p>
+  
+  </div>
   }
 </ul>
