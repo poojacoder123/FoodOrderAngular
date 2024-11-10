@@ -1,0 +1,31 @@
+.searchBox {
+  background: #f1f1f1;
+  margin: 2rem auto;
+  width: 15rem;
+  height: 2.5rem;
+  border: 1px solid grey;
+  border-radius: 16px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.button button {
+  background: red;
+  color: #ffffff;
+  cursor: pointer;
+  height: 100%;
+  border: none;
+  border-radius:0px 16px 16px 0px;
+}
+
+.input input {
+    background: #f1f1f1;
+border: none;
+padding: 10px 0px;
+font-size: 14px;
+}
+
+input:focus{
+    border: none;
+    outline: none;
+}

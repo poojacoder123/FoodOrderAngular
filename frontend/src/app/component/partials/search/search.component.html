@@ -1,0 +1,12 @@
+<div class="searchBox">
+    <div class="input">
+        <input type="text" placeholder="Search..."
+         #s (keyup.enter)="search(s.value)"
+         [value]="searchTerm"
+         >
+         
+    </div>
+  <div class="button">
+    <button (click)="search(s.value)" >Search</button>
+  </div>
+</div>

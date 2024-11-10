@@ -1,8 +1,15 @@
-.fa-star{
-    color: grey;
-    cursor: pointer;
-
-    &.rated{
-color : red;
-    }
+.star-rating {
+  display: flex;
+  flex-direction: row;
+  gap: 1px;
+}
+.fa-star {
+  font-size: 1rem;
+  cursor: pointer;
+}
+.red-star {
+  color: red;
+}
+.grey-star {
+  color: grey;
 }
