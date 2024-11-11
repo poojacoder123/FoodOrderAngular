@@ -1,0 +1,46 @@
+@for(food of foodObj; track food){
+<div class="food-container">
+  <div class="image-div">
+    <a href=""> <img [src]="food.imageUrl" [alt]="food.name" /></a>
+  </div>
+  <div class="content">
+    <div class="food-name-container">
+      <div class="title-div">
+        <div class="food-name">
+          {{ food.name }}
+        </div>
+        <div>
+          <i
+            class="fas fa-heart"
+            [ngClass]="{
+              favorite: food.favorite,
+              'not-favorite': !food.favorite
+            }"
+          ></i>
+        </div>
+      </div>
+      <div style="margin-bottom: 30px;">
+        <app-star-rating [rating]="food.stars"></app-star-rating>
+      </div>
+   
+      <!-- @for( tag of food.tags; track tag){
+        <div class="origin-name"  style="margin-bottom: 50px;">
+          {{ tag | titlecase }}
+        </div>
+        } -->
+    </div>
+    @for( ori of food.origins; track ori){
+    <span class="origin-name">
+      {{ ori | titlecase }}
+    </span>
+    }
+
+    <div class="time-to-cook">
+      <i class="fas fa-clock clock" aria-hidden="true"></i>
+      Time to cook about <b>{{ food.cookTime }}</b> Minutes
+    </div>
+    <div class="price">Price {{ food.price  | currency}}</div>
+    <button routerLink="/cart">Add to Cart</button>
+  </div>
+</div>
+}

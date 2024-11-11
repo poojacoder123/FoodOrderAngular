@@ -25,4 +25,8 @@ return sample_tags
   return tag=='All'?
   this.getFood(): this.getFood().filter(food=>food.tags.includes(tag) )
   }
+
+  getFoodById(id: String) :Food[]{
+return this.getFood().filter(food=>food.id ==id);
+  }
 }
