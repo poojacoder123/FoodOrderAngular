@@ -1,11 +1,15 @@
 header {
   background-color: white;
   border-bottom: 2px solid red;
-  position: relative;
+  position: fixed;
+  width: 100%; 
+  top: 0; 
+  z-index: 1000; 
   .header-container {
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
+    width: 100%; 
     a {
       text-decoration: none;
       color: red;
@@ -26,6 +30,7 @@ header {
       list-style-type: none;
       display: flex;
       flex-wrap: wrap;
+      margin-top: 1.5rem;
 
       a {
         padding: 0.5rem;

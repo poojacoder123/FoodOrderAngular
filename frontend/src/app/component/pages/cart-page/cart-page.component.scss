@@ -1,0 +1,86 @@
+.cart-container {
+  display: flex;
+  justify-content: space-between;
+  margin: 1rem;
+  gap: 1rem;
+  flex-wrap: wrap;
+
+  .table-div {
+    width: 65%;
+    height: auto;
+    border-radius: 30px;
+    display: flex;
+    padding: 1rem;
+    border: 1px solid #8080808a;
+
+    table {
+      border: none;
+    }
+
+    tbody,
+    td,
+    tfoot,
+    th,
+    thead,
+    tr {
+      border-style: none !important;
+    }
+
+    .food-image {
+      width: 5rem;
+      height: 5rem;
+
+      img {
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+      }
+    }
+
+    select{
+        border: none;
+    }
+  }
+
+  .total {
+    width: 30%;
+    height: auto;
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 1rem;
+    border: 1px solid #8080808a;
+
+    .order-button button {
+      width: 100%;
+    }
+    P {
+      text-align: center;
+    }
+  }
+  button {
+    background-color: red;
+    color: white;
+    padding: px;
+    border-radius: 12px;
+    border: none;
+    // font-size: 20px;
+  }
+}
+
+@media (min-width: 360px) and (max-width: 768px) {
+  .cart-container {
+    display: block;
+    margin: 1rem;
+    .table-div {
+      width: 100%;
+      height: auto;
+    }
+
+    .total {
+        margin-top: 1rem;
+      width: 100%;
+    }
+  }
+}
