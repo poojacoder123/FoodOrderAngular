@@ -4,23 +4,29 @@
     <div class="table-div">
 <table class="table table-responsive ">
     <tbody>
-        <tr>
-            <td><div class="food-image">
-                <img src="assets/food-5.jpg" alt="">
-            </div></td>
-            <div>
-                
-            </div>
-            <td >Food Name</td>
-            <td>
-               <select name="" id="">
-                <option value="1">Qty</option>
-                <option value="1">1</option>
-               </select>
-            </td>
-            <td>Price</td>
-            <td><button class="remove-btn">Remove</button></td>
-        </tr>
+        @for(cartItem of foodArray; track cartItem){
+            <tr>
+                <td><div class="food-image">
+                    <img [src]="cartItem" alt="">
+                </div></td>
+                <div>
+                    
+                </div>
+                <td >Food Name</td>
+                <td>
+                   <select name="" id="">
+                    <option value="1">Qty</option>
+                    <option value="1">1</option>
+                   </select>
+                </td>
+                <td>Price</td>
+                <td><button class="remove-btn">Remove</button></td>
+            </tr>
+        }
+        @empty {
+            <p>No items in cart.</p>
+        }
+      
     </tbody>
 </table>
     </div>

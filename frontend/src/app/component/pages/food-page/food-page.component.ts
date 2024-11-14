@@ -1,9 +1,10 @@
-import { Component, Inject, inject, OnInit } from '@angular/core';
+import { Component, Inject, OnInit } from '@angular/core';
 import { Food } from '../../../shared/models/food';
-import { ActivatedRoute, RouterLink } from '@angular/router';
+import { ActivatedRoute, Router, RouterLink } from '@angular/router';
 import { FoodService } from '../../../services/food.service';
 import { StarRatingComponent } from '../../partials/star-rating/star-rating.component';
 import { CommonModule } from '@angular/common';
+import { CartService } from '../../../services/cart.service';
 
 @Component({
   selector: 'app-food-page',
@@ -13,10 +14,12 @@ import { CommonModule } from '@angular/common';
   styleUrl: './food-page.component.scss',
 })
 export class FoodPageComponent implements OnInit {
-  foodObj!: Food[];
+  foodObj!: Food[]|any;
   constructor(
     @Inject(ActivatedRoute) private ActivatedRoute: ActivatedRoute,
-    private foodService: FoodService
+    @Inject(Router) private Router: Router,
+    private foodService: FoodService,
+    private cartService : CartService,
   ) {}
 
   ngOnInit(): void {
@@ -25,5 +28,10 @@ export class FoodPageComponent implements OnInit {
         this.foodObj = this.foodService.getFoodById(params['id']);    
       }
     });
+  }
+
+  addToCart(){
+    this.cartService.addToCart(this.foodObj);
+this.Router.navigateByUrl('/cart')
   }
 }

@@ -13,10 +13,22 @@ import { TitleComponent } from '../../partials/title/title.component';
 })
 export class CartPageComponent {
   cart!: Cart;
+  price : number = 0;
+  foodArray = [];
   constructor(private cartService: CartService) {
     this.cartService.getCartObservable().subscribe((data) => {
       this.cart = data;
+      let totalPrice = this.cart.items.forEach((item)=>{
+
+        item.food.forEach((foods :any)=>{
+          this.foodArray = foods;
+          console.log(foods);
+         this.price += foods.price
+        })
+      })
     });
+
+    console.log(this.price)
   }
 
   removeCart(cartItem: CarItem) {

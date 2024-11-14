@@ -14,11 +14,11 @@ export class CartService {
   prviateCartSubject: BehaviorSubject<Cart> = new BehaviorSubject(this.cart);
 
   addToCart(food: Food) {
-    let cartItem = this.cart.items.find((item) => item.food.id == food.id);
+    // let cartItem = this.cart.items.find((item) => item.food.id == food.id);
 
-    if (cartItem) {
+    // if (cartItem) {
       this.cart.items.push(new CarItem(food));
-    }
+    // }
     this.setCartToLocalStorage();
   }
 
@@ -48,7 +48,7 @@ export class CartService {
     this.cart.totalPrice = this.cart.items.reduce(
       (prev, current) => prev + current.price,
       0
-    );
+);
     this.cart.totalCount = this.cart.items.reduce(
       (prev, current) => prev + current.quantity,
       0

@@ -40,7 +40,7 @@
       Time to cook about <b>{{ food.cookTime }}</b> Minutes
     </div>
     <div class="price">Price {{ food.price  | currency}}</div>
-    <button routerLink="/cart">Add to Cart</button>
+    <button (click)="addToCart()">Add to Cart</button>
   </div>
 </div>
 }
