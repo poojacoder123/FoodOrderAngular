@@ -2,7 +2,8 @@ require("dotenv").config();
 const express = require("express");
 const app = express();
 const mongoose = require("mongoose");
-const userRoutes = require("./routes/user.routes.js")
+const userRoutes = require("./routes/user.routes.js");
+const categoryRoutes = require("./routes/category.routes.js")
 
 //middlewares
 app.use(express.json());
@@ -10,6 +11,7 @@ app.use(express.urlencoded({ extended: false }));
 
 
  app.use("/api/user", userRoutes );
+ app.use("/api/category", categoryRoutes );
 
 mongoose
   .connect(process.env.MONGO_URL)

@@ -6,10 +6,12 @@ const {
   getUserByID,
   updateUser,
   deleteUser,
+  loginUser
 } = require("../controllers/user.controller.js");
 
 
 router.post("/", addUser);
+router.post("/login", loginUser);
 router.get("/", getUser);
 router.get("/:id", getUserByID);
 router.put("/:id", updateUser);
