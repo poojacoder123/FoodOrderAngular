@@ -2,12 +2,14 @@ import { ApplicationConfig, importProvidersFrom, provideZoneChangeDetection } fr
 import { provideRouter } from '@angular/router';
 import { StarRatingModule } from 'angular-star-rating';
 import { routes } from './app.routes';
-import { StarRatingComponent } from 'ng-starrating';
+import { provideHttpClient, withInterceptors } from '@angular/common/http';
+import { authInterceptor } from './interceptor/auth.interceptor';
 
 export const appConfig: ApplicationConfig = {
   providers: [
     provideZoneChangeDetection({ eventCoalescing: true }), 
     provideRouter(routes),
-    importProvidersFrom( StarRatingModule.forRoot())
+    importProvidersFrom( StarRatingModule.forRoot()),
+    provideHttpClient(withInterceptors([authInterceptor])),
   ]
 };
